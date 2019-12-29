@@ -54,7 +54,7 @@ There are 2 ways to run simulations for each of the classes previously mentioned
 
 - `t` (int) - Number of time steps to simulate.
 - `folder` : (string, optional) - Folder name to save output files. Default: None.
-- `save_anim` : (boolean, optional) - Save the displayed animation. Default: False.
+- `save_anim` : (boolean, optional) - Save the animation instead of displaying it. Default: False.
 
 ## Julia script
 

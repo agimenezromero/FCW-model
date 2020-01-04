@@ -1,12 +1,12 @@
 # FCW model
 
-Python library and Julia script to simulate the Flexible Chain Walker (FCW) model.
+Python library and Julia scripts to simulate several Flexible Chain Walker (FCW) models.
 
 The python library can be useful to perform simulations for a single density and plot animations. To reproduce the results in reference <sup>1</sup>, which involve simulations for several densities, python is not efficient. For this purpose the model has been implemented also in Julia, which is a fast compiled programming language.
 
 # Overview
 
-The flexible chainlike walker (FCW) model was presented in 2008 by Takashi Mashiko, from the department of Mechanical Engineering of Shizuoka University. The model is proposed as a minimal model of a deformable moving object and as an extension of the regular random-walk model. For more information about the model see reference. <sup>1</sup>
+The flexible chainlike walker (FCW) model was presented in 2008 by Takashi Mashiko, from the department of Mechanical Engineering of Shizuoka University. The model is proposed as a minimal model of a deformable moving object and as an extension of the regular random-walk model. In reference <sup>1</sup> the collective behaviour of a many-body system of FCW's is studied through numerical simulations on a square lattice. The results show that the FCW's exhibit a novelty type of irreversible aggregation, despite the lack of adherence in the model, which had always been assumed in all previous aggregation models. This irreversible aggregation without adherence proves to be an outcome of the deformability of the FCW's. Moreover, other FCW models were presented also by Takashi Mashiko in 2009 <sup>2</sup> and are also reviewed and studied here. These are the smart and the double-headed FCW models. It will be shown that providing the FCW's with some kind of intelligence isn't sufficient to avoid the irreversible aggregation while providing them with two heads is a sufficient condition to remove it.
 
 Table of contents
 =================
@@ -16,7 +16,7 @@ Table of contents
    * [Table of contents](#table-of-contents)
    * [Requeriments](#requeriments)
    * [Documentation](#documentation)
-       - [Python class](#python-class)
+       - [Python library](#python-library)
             - [Initialisation](#initialisation)
             - [Running simulations](#running-simulations)
        - [Julia script](#julia-script)
@@ -38,11 +38,11 @@ Julia 1.0.4 installed with the following libraries
 
 # Documentation
 
-## Python class
+## Python library
 
 ### Initialisation
 
-To initialise the available Python class (`FCW_model`) the following parameters must be passed in:
+To initialise the available Python classes (`FCW_model`, `SFCW_model` and `DHFCW_model`) the following parameters must be passed in:
 
 - `L` (int) - Lattice length.
 - `l` (int) - FCW length (nº of particles that conform a FCW)
@@ -78,7 +78,7 @@ Just execute the self.assembling_chains.jl file or the Jupyter notebook with the
 ## Python simulation
 
 ```python
-from self_assembling import FCW_model
+from FCW_library import FCW_model
 
 L = 100
 l = 8
@@ -96,7 +96,7 @@ model.simulate(t, folder=foldername)
 ## Python animation
 
 ```python
-from self_assembling import FCW_model
+from FCW_library import FCW_model
 
 L = 100
 l = 8
@@ -116,7 +116,7 @@ To perform a simulation with Julia the Jupyter-Notebook file or the .jl script f
 To run the Julia script in background just type the following command in the bash
 
 ```bash
-nohup self_assembling_chains.jl > outfile.out &
+nohup FCW_model.jl > outfile.out &
 ```
 
 this will run the script in the background writting the print outputs in the outfile.out file. The "&" command will let the cmd window free.
@@ -129,3 +129,4 @@ This project is licensed under the GNU General Public License - see the [LICENSE
 
 # References
 1. [Takashi Mashiko. “Irreversible aggregation of flexible chainlike walkers without adherence”.In:Phys. Rev. E78 (1 July 2008), p. 011106.](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.78.011106)
+2. [Takashi Mashiko. “Effect of Individual Properties of Flexible Chainlike Walkers in a Many-Body System”. In:The Open Transport Phenomena Journal1 (Oct. 2009), pp. 30–34.](https://benthamopen.com/ABSTRACT/TOTPJ-1-30)

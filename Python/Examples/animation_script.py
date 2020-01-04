@@ -1,11 +1,11 @@
-from self_assembling import FCW_model
+from FCW_library import *
 
 L = 100
-rho = 0.5
+rho = 0.1
 
-l = 8
+l = 5
 
-t = 10**3
+t = 10**5
 
 model = FCW_model(L, l, rho)
 

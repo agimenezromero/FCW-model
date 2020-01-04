@@ -1,11 +1,11 @@
-from self_assembling import FCW_model
+from FCW_library import FCW_model
 
 L = 100
-rho = 0.2
+rho = 0.5
 
-l = 8
+l = 2
 
-t = 10**4
+t = 10**5
 
 foldername = 'l_%i' % l
 

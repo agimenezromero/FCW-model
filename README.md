@@ -8,6 +8,8 @@ The python library can be useful to perform simulations for a single density and
 
 The flexible chainlike walker (FCW) model was presented in 2008 by Takashi Mashiko, from the department of Mechanical Engineering of Shizuoka University. The model is proposed as a minimal model of a deformable moving object and as an extension of the regular random-walk model. In reference <sup>1</sup> the collective behaviour of a many-body system of FCW's is studied through numerical simulations on a square lattice. The results show that the FCW's exhibit a novelty type of irreversible aggregation, despite the lack of adherence in the model, which had always been assumed in all previous aggregation models. This irreversible aggregation without adherence proves to be an outcome of the deformability of the FCW's. Moreover, other FCW models were presented also by Takashi Mashiko in 2009 <sup>2</sup> and are also reviewed and studied here. These are the smart and the double-headed FCW models. It will be shown that providing the FCW's with some kind of intelligence isn't sufficient to avoid the irreversible aggregation while providing them with two heads is a sufficient condition to remove it.
 
+More detailed information about the models can be found at the references given and in the [Review_FCW_models](https://github.com/agimenezromero/FCW-model/blob/master/Review_FCW_models.pdf) pdf file.
+
 Table of contents
 =================
 
